@@ -1,0 +1,109 @@
+#include <iostream>
+using namespace std;
+
+
+struct Buku {
+    string judul;
+    string pengarang;
+    int tahunTerbit;
+    float harga;
+};
+
+int main() {
+
+    Buku dataBuku[5];
+    int jumlah;
+
+    
+    cout << "Masukkan jumlah buku (1-5): ";
+    cin >> jumlah;
+    cin.ignore();
+
+    
+    for (int i = 0; i < jumlah; i++) {
+
+        cout << "\nData Buku ke-" << i + 1 << endl;
+
+        cout << "Judul          : ";
+        getline(cin, dataBuku[i].judul);
+
+        cout << "Pengarang      : ";
+        getline(cin, dataBuku[i].pengarang);
+
+        cout << "Tahun Terbit   : ";
+        cin >> dataBuku[i].tahunTerbit;
+
+        cout << "Harga          : ";
+        cin >> dataBuku[i].harga;
+        cin.ignore();
+    }
+
+    
+    cout << "\n================ DATA BUKU ================\n";
+    cout << "No | Judul | Pengarang | Tahun | Harga\n";
+    cout << "-------------------------------------------\n";
+
+    for (int i = 0; i < jumlah; i++) {
+
+        cout << i + 1 << " | "
+             << dataBuku[i].judul << " | "
+             << dataBuku[i].pengarang << " | "
+             << dataBuku[i].tahunTerbit << " | "
+             << dataBuku[i].harga << endl;
+    }
+
+    
+    int max = 0;
+
+    for (int i = 1; i < jumlah; i++) {
+
+        if (dataBuku[i].harga > dataBuku[max].harga) {
+            max = i;
+        }
+    }
+
+    cout << "\n===== Buku dengan Harga Tertinggi =====\n";
+    cout << "Judul       : " << dataBuku[max].judul << endl;
+    cout << "Pengarang   : " << dataBuku[max].pengarang << endl;
+    cout << "Tahun       : " << dataBuku[max].tahunTerbit << endl;
+    cout << "Harga       : " << dataBuku[max].harga << endl;
+
+    
+    float total = 0, rataRata;
+
+    for (int i = 0; i < jumlah; i++) {
+        total += dataBuku[i].harga;
+    }
+
+    rataRata = total / jumlah;
+
+    cout << "\nRata-rata harga buku : " << rataRata << endl;
+
+
+    int tahunCari;
+    bool ditemukan = false;
+
+    cout << "\nMasukkan tahun yang dicari : ";
+    cin >> tahunCari;
+
+    cout << "\nBuku yang terbit pada tahun "
+         << tahunCari << ":\n";
+
+    for (int i = 0; i < jumlah; i++) {
+
+        if (dataBuku[i].tahunTerbit == tahunCari) {
+
+            cout << "- " << dataBuku[i].judul
+                 << " oleh "
+                 << dataBuku[i].pengarang << endl;
+
+            ditemukan = true;
+        }
+    }
+
+    if (ditemukan == false) {
+        cout << "Tidak ada buku yang terbit pada tahun tersebut." << endl;
+    }
+
+    return 0;
+}

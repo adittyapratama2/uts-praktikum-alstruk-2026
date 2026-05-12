@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+// Deklarasi struct
+struct Buku {
+    string judul;
+    string pengarang;
+    int tahunTerbit;
+    float harga;
+};
+
+int main() {
+
+    
+    Buku dataBuku[5];
+
+    int jumlah;
+
+    
+    cout << "Masukkan jumlah buku (1-5): ";
+    cin >> jumlah;
+    cin.ignore();
+
+    
+    for (int i = 0; i < jumlah; i++) {
+
+        cout << "\nData Buku ke-" << i + 1 << endl;
+
+        cout << "Judul          : ";
+        getline(cin, dataBuku[i].judul);
+
+        cout << "Pengarang      : ";
+        getline(cin, dataBuku[i].pengarang);
+
+        cout << "Tahun Terbit   : ";
+        cin >> dataBuku[i].tahunTerbit;
+
+        cout << "Harga          : ";
+        cin >> dataBuku[i].harga;
+        cin.ignore();
+    }
+
+    
+    cout << "\n================ DATA BUKU ================\n";
+    cout << "No | Judul | Pengarang | Tahun | Harga\n";
+    cout << "-------------------------------------------\n";
+
+    for (int i = 0; i < jumlah; i++) {
+
+        cout << i + 1 << " | "
+             << dataBuku[i].judul << " | "
+             << dataBuku[i].pengarang << " | "
+             << dataBuku[i].tahunTerbit << " | "
+             << dataBuku[i].harga << endl;
+    }
+
+    return 0;
+}
