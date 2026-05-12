@@ -30,6 +30,7 @@ Analisis: Program ini mengimplementasikan konsep struktur data (Stack/Queue sesu
 
 ## SUMBER BELAJAR
 - Modul Praktikum Algoritma dan Struktur Data
+- Latihan kisi-kisi
 - Youtube Kelas Terbuka
 - Stack Overflow
-- Diskusi bareng AI assistant
+
