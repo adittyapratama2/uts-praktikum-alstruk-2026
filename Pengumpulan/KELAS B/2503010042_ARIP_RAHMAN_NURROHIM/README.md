@@ -7,4 +7,6 @@
 ## Deskripsi Tugas
 Repo ini berisi jawaban UTS Praktikum:
 1. **Soal 1:** Array & Struct (Manajemen Data Mahasiswa)
+***Mencakup pertanyaan A dan B***
 2. **Soal 2:** Stack & Queue (Sistem Perpustakaan)
+***Mencakup pertanyaan A dan B***
