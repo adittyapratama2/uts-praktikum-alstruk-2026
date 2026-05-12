@@ -1,125 +1,226 @@
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
-// Struct data buku
-struct Buku {
-    string judul;
-    string pengarang;
-    int tahun;
-    float harga;
-};
+// ================= STACK =================
+
+const int MAX_STACK = 5;
+
+string stackTransaksi[MAX_STACK];
+int top = -1;
+
+bool isEmptyStack() {
+    return top == -1;
+}
+
+bool isFullStack() {
+    return top == MAX_STACK - 1;
+}
+
+void push(string transaksi) {
+
+    if (isFullStack()) {
+
+        cout << "Stack penuh! Data tidak bisa ditambah.\n";
+
+    } else {
+
+        top++;
+        stackTransaksi[top] = transaksi;
+
+        cout << "Transaksi "
+             << transaksi
+             << " berhasil ditambahkan.\n";
+    }
+}
+
+void pop() {
+
+    if (isEmptyStack()) {
+
+        cout << "Stack kosong!\n";
+
+    } else {
+
+        cout << "Transaksi "
+             << stackTransaksi[top]
+             << " berhasil dihapus.\n";
+
+        top--;
+    }
+}
+
+void peekStack() {
+
+    if (isEmptyStack()) {
+
+        cout << "Stack kosong.\n";
+
+    } else {
+
+        cout << "Transaksi teratas : "
+             << stackTransaksi[top] << endl;
+    }
+}
+
+void tampilStack() {
+
+    if (isEmptyStack()) {
+
+        cout << "Isi stack kosong.\n";
+
+    } else {
+
+        cout << "\nIsi Stack:\n";
+
+        for (int i = top; i >= 0; i--) {
+
+            cout << stackTransaksi[i] << endl;
+        }
+    }
+}
+
+
+// ================= QUEUE =================
+
+const int MAX_QUEUE = 5;
+
+string queuePelanggan[MAX_QUEUE];
+
+int front = -1;
+int rear = -1;
+
+bool isEmptyQueue() {
+    return rear == -1;
+}
+
+bool isFullQueue() {
+    return rear == MAX_QUEUE - 1;
+}
+
+void enqueue(string nama) {
+
+    if (isFullQueue()) {
+
+        cout << "Queue penuh! Tidak bisa menambah pelanggan.\n";
+
+    } else {
+
+        if (isEmptyQueue()) {
+            front = 0;
+        }
+
+        rear++;
+        queuePelanggan[rear] = nama;
+
+        cout << nama
+             << " masuk ke antrian.\n";
+    }
+}
+
+void dequeue() {
+
+    if (isEmptyQueue()) {
+
+        cout << "Queue kosong!\n";
+
+    } else {
+
+        cout << queuePelanggan[front]
+             << " keluar dari antrian.\n";
+
+        if (front == rear) {
+
+            front = -1;
+            rear = -1;
+
+        } else {
+
+            front++;
+        }
+    }
+}
+
+void peekQueue() {
+
+    if (isEmptyQueue()) {
+
+        cout << "Queue kosong.\n";
+
+    } else {
+
+        cout << "Pelanggan terdepan : "
+             << queuePelanggan[front] << endl;
+    }
+}
+
+void tampilQueue() {
+
+    if (isEmptyQueue()) {
+
+        cout << "Antrian kosong.\n";
+
+    } else {
+
+        cout << "\nIsi Queue:\n";
+
+        for (int i = front; i <= rear; i++) {
+
+            cout << queuePelanggan[i] << endl;
+        }
+    }
+}
+
 
 int main() {
 
-    Buku buku[5];
-    int jumlahBuku;
+    cout << "=====================================\n";
+    cout << "A. STACK - RIWAYAT TRANSAKSI\n";
+    cout << "=====================================\n\n";
 
-    cout << "======================================" << endl;
-    cout << "      PROGRAM DATA TOKO BUKU" << endl;
-    cout << "======================================" << endl;
+    push("T001");
+    push("T002");
+    push("T003");
+    push("T004");
 
-    cout << "Masukkan jumlah buku : ";
-    cin >> jumlahBuku;
-    cin.ignore();
+    cout << endl;
 
-    // Input data buku
-    for (int i = 0; i < jumlahBuku; i++) {
+    peekStack();
 
-        cout << "\nData Buku Ke-" << i + 1 << endl;
+    cout << endl;
 
-        cout << "Judul Buku     : ";
-        getline(cin, buku[i].judul);
+    pop();
+    pop();
 
-        cout << "Nama Pengarang : ";
-        getline(cin, buku[i].pengarang);
+    tampilStack();
 
-        cout << "Tahun Terbit   : ";
-        cin >> buku[i].tahun;
+    cout << "\n\n";
 
-        cout << "Harga Buku     : ";
-        cin >> buku[i].harga;
-        cin.ignore();
-    }
+    cout << "/////////////////////////////////////\n";
+    cout << "B. QUEUE - ANTRIAN PELANGGAN\n";
+    cout << "/////////////////////////////////////\n\n";
 
-    // Menampilkan semua data buku
-    cout << "\n\nDAFTAR DATA BUKU" << endl;
+    enqueue("Budi");
+    enqueue("Sari");
+    enqueue("Eko");
 
-    cout << "==================================================================" << endl;
+    tampilQueue();
 
-    cout << left << setw(5)  << "No"
-         << setw(25) << "Judul"
-         << setw(20) << "Pengarang"
-         << setw(10) << "Tahun"
-         << setw(12) << "Harga" << endl;
+    cout << endl;
 
-    cout << "==================================================================" << endl;
+    peekQueue();
 
-    for (int i = 0; i < jumlahBuku; i++) {
+    cout << endl;
 
-        cout << left << setw(5) << i + 1
-             << setw(25) << buku[i].judul
-             << setw(20) << buku[i].pengarang
-             << setw(10) << buku[i].tahun
-             << fixed << setprecision(2)
-             << setw(12) << buku[i].harga << endl;
-    }
+    dequeue();
 
-    // Mencari buku dengan harga tertinggi
-    int indeksMahal = 0;
+    cout << endl;
 
-    for (int i = 1; i < jumlahBuku; i++) {
-        if (buku[i].harga > buku[indeksMahal].harga) {
-            indeksMahal = i;
-        }
-    }
+    enqueue("Dewi");
 
-    cout << "\n\nBUKU DENGAN HARGA TERTINGGI" << endl;
-    cout << "Judul      : " << buku[indeksMahal].judul << endl;
-    cout << "Pengarang  : " << buku[indeksMahal].pengarang << endl;
-    cout << "Tahun      : " << buku[indeksMahal].tahun << endl;
-    cout << "Harga      : " << buku[indeksMahal].harga << endl;
+    tampilQueue();
 
-    // Menghitung rata-rata harga
-    float totalHarga = 0;
+    cout << endl;
 
-    for (int i = 0; i < jumlahBuku; i++) {
-        totalHarga += buku[i].harga;
-    }
-
-    float rataRata = totalHarga / jumlahBuku;
-
-    cout << "\nRata-rata harga buku : " 
-         << fixed << setprecision(2)
-         << rataRata << endl;
-
-    // Pencarian berdasarkan tahun terbit
-    int cariTahun;
-    bool ditemukan = false;
-
-    cout << "\nMasukkan tahun yang ingin dicari : ";
-    cin >> cariTahun;
-
-    cout << "\nBuku yang terbit pada tahun " 
-         << cariTahun << ":" << endl;
-
-    for (int i = 0; i < jumlahBuku; i++) {
-
-        if (buku[i].tahun == cariTahun) {
-
-            cout << "- " << buku[i].judul
-                 << " | " << buku[i].pengarang
-                 << " | Harga : " << buku[i].harga << endl;
-
-            ditemukan = true;
-        }
-    }
-
-    if (ditemukan == false) {
-        cout << "Tidak ada buku yang terbit pada tahun tersebut." << endl;
-    }
-
-    cout << "\n";
     system("pause");
 
     return 0;
