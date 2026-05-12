@@ -1,5 +1,11 @@
 # UTS Praktikum Algoritma dan Struktur Data 2026
 
+## Informasi Pribadi
+- **NIM** : 2503010132
+- **Nama** : ALLYA_HERICKA_PUTRI
+- **Kelas** : B
+
+
 ## INFORMASI UJIAN
 - Mata Kuliah : Praktikum Algoritma dan Struktur Data
 - Semester    : Genap 2025/2026
