@@ -1,113 +1,36 @@
-# UTS Praktikum Algoritma dan Struktur Data 2026
-
-## INFORMASI UJIAN
-- Mata Kuliah : Praktikum Algoritma dan Struktur Data
-- Semester    : Genap 2025/2026
-- Media Submit: GitHub Pull Request
-- Bahasa      : C++
-- IDE         : Dev C++
-
----
-
-# ATURAN PENGERJAAN
-
-1. Kerjakan secara individu.
-2. Dilarang menyalin pekerjaan mahasiswa lain.
-3. Program wajib dapat di-compile tanpa error.
-4. Gunakan struktur folder yang telah ditentukan.
-5. Push dan Pull Request wajib dilakukan sebelum deadline.
-
----
-
-# PEMBAGIAN SOAL
-
-- NIM GANJIL → Soal GANJIL
-- NIM GENAP → Soal GENAP
-
-File soal tersedia pada folder:
-
-```text
-SOAL/
-```
-
-# STRUKTUR PENGUMPULAN
-
-Mahasiswa wajib membuat folder sesuai format:
-
-```text
-Pengumpulan/
-├── KELAS A/
-│   └── 2503010001_WAHYU_ADIWIBOWO/
-│       ├── soal1.cpp
-│       └── soal2.cpp
-        └── README.md
-└── KELAS B/
-    └── 2503010001_WAHYU_ADIWIBOWO/
-        ├── soal1.cpp
-        └── soal2.cpp
-        └── README.md
-└── KELAS C/
-    └── 2503010001_WAHYU_ADIWIBOWO/
-        ├── soal1.cpp
-        └── soal2.cpp
-        └── README.md
-└── KELAS D/
-    └── 2503010001_WAHYU_ADIWIBOWO/
-        ├── soal1.cpp
-        └── soal2.cpp
-        └── README.md
-└── KELAS E/
-    └── 2503010001_WAHYU_ADIWIBOWO/
-        ├── soal1.cpp
-        └── soal2.cpp
-        └── README.md
-```
-
-# STRUKTUR FILE README.md
-
-```text
-# 2503010001 - WAHYU_ADIWIBOWO
+# UTS Praktikum Algoritma dan Struktur Data
 
 ## Informasi Pribadi
-- **NIM** : 2503010001
-- **Nama** : WAHYU_ADIWIBOWO
-- **Kelas** : A
+- NIM: 2503010046
+- Nama: FINA LUTHFIAH
+- Kelas: B
 
 ## Informasi Ujian
-- **Mata Kuliah** : Praktikum Algoritma dan Struktur Data
-- **Semester** : Genap 2025/2026
-- **Media Submit** : GitHub Pull Request
-- **Bahasa** : C++
-- **IDE** : Dev C++
+- Mata Kuliah: Praktikum Algoritma dan Struktur Data
+- Semester: Genap 2025/2026
+- Media Submit: GitHub Pull Request
+- Bahasa: C++
+- IDE: Dev C++
 
----
+## Ringkasan Tugas
 
-## DAFTAR ISI
-- [Soal 1](#soal-1)
-- [Soal 2](#soal-2)
+### Soal 1: Array of Struct
+- Implementasi struct Mahasiswa untuk menyimpan data NIM, Nama, Semester, dan IPK.
+- Menampilkan data dalam format tabel menggunakan library iomanip.
+- Menghitung rata-rata IPK dan mencari data IPK tertinggi.
+- Fitur pencarian mahasiswa berdasarkan semester menggunakan variabel penanda (boolean).
 
-## ANALISIS & PEMBAHASAN SOAL
+### Soal 2: Stack dan Queue
+- Stack: Implementasi tumpukan judul buku dengan prinsip LIFO (Last In First Out).
+- Queue: Implementasi antrean anggota perpustakaan dengan prinsip FIFO (First In First Out).
+- Operasi manual menggunakan array statis: push, pop, enqueue, dan dequeue.
+- Pengecekan kondisi isEmpty dan isFull untuk validasi data pada setiap fungsi.
 
-### Soal 1
+## Sumber Belajar
+1. Modul Praktikum Algoritma dan Struktur Data 2026, Teknik Informatika.
+2. Video Tutorial YouTube: "Struktur Data C++: Implementasi Stack dan Queue".
+3. Dokumentasi Resmi C++: cppreference.com (Materi Struct & Array).
+4. GeeksforGeeks: "Array implementation of Stack and Queue".
+5. Forum Diskusi: Stack Overflow dan GitHub Community untuk debugging program.
 
-...(uraikan analisis dan pembahasan soal 1)...
 
-### Soal 2
-
-...(uraikan analisis dan pembahasan soal 2)...
-
----
-
-## SUMBER BELAJAR
-
-Sebutkan sumber belajar yang digunakan, contohnya:
-
-- Modul Praktikum Algoritma dan Struktur Data
-- Modul Pointer
-- Modul Rekursif
-- Modul Struktur Data Dasar
-- Buku Algoritma dan Pemrograman Modern
-- Video pembelajaran online (YouTube, Coursera, dll.)
-- Stack Overflow
-- Dokumentasi resmi bahasa C++
-```
