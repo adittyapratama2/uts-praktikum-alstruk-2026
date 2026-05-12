@@ -1,76 +1,9 @@
-# UTS Praktikum Algoritma dan Struktur Data 2026
-
-## INFORMASI UJIAN
-- Mata Kuliah : Praktikum Algoritma dan Struktur Data
-- Semester    : Genap 2025/2026
-- Media Submit: GitHub Pull Request
-- Bahasa      : C++
-- IDE         : Dev C++
-
----
-
-# ATURAN PENGERJAAN
-
-1. Kerjakan secara individu.
-2. Dilarang menyalin pekerjaan mahasiswa lain.
-3. Program wajib dapat di-compile tanpa error.
-4. Gunakan struktur folder yang telah ditentukan.
-5. Push dan Pull Request wajib dilakukan sebelum deadline.
-
----
-
-# PEMBAGIAN SOAL
-
-- NIM GANJIL → Soal GANJIL
-- NIM GENAP → Soal GENAP
-
-File soal tersedia pada folder:
-
-```text
-SOAL/
-```
-
-# STRUKTUR PENGUMPULAN
-
-Mahasiswa wajib membuat folder sesuai format:
-
-```text
-Pengumpulan/
-├── KELAS A/
-│   └── 2503010001_WAHYU_ADIWIBOWO/
-│       ├── soal1.cpp
-│       └── soal2.cpp
-        └── README.md
-└── KELAS B/
-    └── 2503010001_WAHYU_ADIWIBOWO/
-        ├── soal1.cpp
-        └── soal2.cpp
-        └── README.md
-└── KELAS C/
-    └── 2503010001_WAHYU_ADIWIBOWO/
-        ├── soal1.cpp
-        └── soal2.cpp
-        └── README.md
-└── KELAS D/
-    └── 2503010001_WAHYU_ADIWIBOWO/
-        ├── soal1.cpp
-        └── soal2.cpp
-        └── README.md
-└── KELAS E/
-    └── 2503010001_WAHYU_ADIWIBOWO/
-        ├── soal1.cpp
-        └── soal2.cpp
-        └── README.md
-```
-
-# STRUKTUR FILE README.md
-
-```text
-# 2503010001 - WAHYU_ADIWIBOWO
+# MUHAMAD_FRIAN_ERLIANA
+# 2503010001 - muhamad_frian_erliana
 
 ## Informasi Pribadi
-- **NIM** : 2503010001
-- **Nama** : WAHYU_ADIWIBOWO
+- **NIM** : 2503010017
+- **Nama** : muhamad_frian_erliana
 - **Kelas** : A
 
 ## Informasi Ujian
@@ -83,31 +16,27 @@ Pengumpulan/
 ---
 
 ## DAFTAR ISI
-- [Soal 1](#soal-1)
-- [Soal 2](#soal-2)
+- [Soal 1](https://github.com/2503010017-a11y/MUHAMAD_FRIAN_ERLIANA/blob/05e36a3427598a397b212d7a8143678499a5ea62/muhamad_frian_erliana/kela_A/2503010017_muhamad_frian_erliana/soal1.cpp)
+- [Soal 2](https://github.com/2503010017-a11y/MUHAMAD_FRIAN_ERLIANA/blob/b217ab92d651b2b209ff332ef104c7ec8685ee38/muhamad_frian_erliana/kela_A/2503010017_muhamad_frian_erliana/soal2.cpp)
 
 ## ANALISIS & PEMBAHASAN SOAL
 
 ### Soal 1
 
 ...(uraikan analisis dan pembahasan soal 1)...
+Program di atas dibuat menggunakan bahasa C++ dengan konsep Array of Struct untuk menyimpan dan mengelola data buku. Struct digunakan untuk mengelompokkan beberapa tipe data berbeda menjadi satu kesatuan data.
 
 ### Soal 2
 
 ...(uraikan analisis dan pembahasan soal 2)...
-
+Program di atas merupakan implementasi struktur data Stack dan Queue menggunakan bahasa C++ tanpa library STL. Program menggunakan struct, array statis, dan fungsi-fungsi dasar untuk mengelola data transaksi dan antrean pelanggan.
 ---
 
 ## SUMBER BELAJAR
 
 Sebutkan sumber belajar yang digunakan, contohnya:
 
-- Modul Praktikum Algoritma dan Struktur Data
-- Modul Pointer
-- Modul Rekursif
 - Modul Struktur Data Dasar
 - Buku Algoritma dan Pemrograman Modern
 - Video pembelajaran online (YouTube, Coursera, dll.)
 - Stack Overflow
-- Dokumentasi resmi bahasa C++
-```
