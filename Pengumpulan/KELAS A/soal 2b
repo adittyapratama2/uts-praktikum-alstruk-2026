@@ -1,0 +1,112 @@
+#include <iostream>
+using namespace std;
+
+const int MAX = 5;
+
+string queueKasir[MAX];
+
+int front = -1;
+int rear = -1;
+
+bool isEmpty() {
+    return front == -1;
+}
+
+bool isFull() {
+    return rear == MAX - 1;
+}
+
+void tampilQueue() {
+
+    if (isEmpty()) {
+        cout << "Queue kosong.\n";
+    }
+    else {
+
+        cout << "Isi Queue : ";
+
+        for (int i = front; i <= rear; i++) {
+            cout << queueKasir[i] << " ";
+        }
+
+        cout << endl;
+    }
+}
+
+void enqueue(string nama) {
+
+    if (isFull()) {
+        cout << "Queue penuh! "
+             << nama
+             << " tidak bisa masuk antrian.\n";
+    }
+    else {
+
+        if (isEmpty()) {
+            front = 0;
+        }
+
+        rear++;
+        queueKasir[rear] = nama;
+
+        cout << nama
+             << " berhasil masuk antrian.\n";
+
+        tampilQueue();
+    }
+}
+
+void dequeue() {
+
+    if (isEmpty()) {
+        cout << "Queue kosong! Tidak ada pelanggan keluar.\n";
+    }
+    else {
+
+        cout << queueKasir[front]
+             << " keluar dari antrian.\n";
+
+        front++;
+
+        if (front > rear) {
+            front = -1;
+            rear = -1;
+        }
+
+        tampilQueue();
+    }
+}
+
+void peek() {
+
+    if (isEmpty()) {
+        cout << "Queue kosong.\n";
+    }
+    else {
+
+        cout << "Pelanggan terdepan : "
+             << queueKasir[front]
+             << endl;
+    }
+}
+
+int main() {
+
+    enqueue("Budi");
+    enqueue("Sari");
+    enqueue("Eko");
+
+    cout << endl;
+
+    peek();
+
+    cout << endl;
+
+    dequeue();
+
+    cout << endl;
+
+    enqueue("Dewi");
+
+    return 0;
+}
