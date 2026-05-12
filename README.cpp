@@ -1,4 +1,4 @@
-# 2503010001 - WAHYU_ADIWIBOWO
+# 2503010004 - FABIAN_TAUFIQURRAHMAN
 
 ## Informasi Pribadi
 - **NIM** : 2503010004
@@ -79,7 +79,7 @@ Tampilan tabel mempermudah pengguna melihat keseluruhan data mahasiswa.
 
 ?
 
-Analisis Pertanyaan B — Pencarian & Statistik
+Analisis Pertanyaan B â€” Pencarian & Statistik
 
 1. Pencarian Mahasiswa dengan IPK Tertinggi
 
@@ -139,7 +139,7 @@ Program ini merupakan contoh sederhana sistem pengelolaan data mahasiswa menggun
 
 ?
 
-Analisis Soal 2 — Stack & Queue
+Analisis Soal 2 â€” Stack & Queue
 
 Tujuan Program
 
@@ -149,7 +149,7 @@ Program menggambarkan sistem manajemen perpustakaan sederhana.
 
 ?
 
-Analisis Pertanyaan A — Stack: Tumpukan Buku Kembali
+Analisis Pertanyaan A â€” Stack: Tumpukan Buku Kembali
 
 1. Konsep Stack
 
@@ -215,7 +215,7 @@ Simulasi ini menunjukkan bahwa buku terakhir yang masuk akan keluar lebih dahulu
 
 ?
 
-Analisis Pertanyaan B — Queue: Antrian Peminjaman
+Analisis Pertanyaan B â€” Queue: Antrian Peminjaman
 
 1. Konsep Queue
 
@@ -453,7 +453,7 @@ Implementasi fungsi lengkap	?
 Penggunaan top benar	?
 Pesan stack penuh/kosong	?
 Output simulasi sesuai	?
-Pertanyaan B – Queue: Antrean Peminjaman (25 poin)
+Pertanyaan B â€“ Queue: Antrean Peminjaman (25 poin)
 Konsep yang Digunakan
 
 Queue menggunakan prinsip:
