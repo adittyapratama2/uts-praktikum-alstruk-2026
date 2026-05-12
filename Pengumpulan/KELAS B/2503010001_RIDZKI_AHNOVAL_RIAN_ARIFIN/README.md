@@ -2,7 +2,7 @@
 
 ## Informasi Pribadi
 - **NIM** : 2503010031
-- **Nama** : RIDZKI AHNOVAL RIAN ARIFIN
+- **Nama** : RIDZKI AHNOVALRIAN ARIFIN
 - **Kelas** : B
 
 ## Informasi Ujian
