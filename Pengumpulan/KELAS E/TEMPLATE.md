@@ -1,6 +1,5 @@
 Pengumpulan/
 └── KELAS E/
-    └── 2503010001_WAHYU_ADIWIBOWO/
-        ├── soal1.cpp
-        ├── soal2.cpp
+    └── 2403010207_Pipit_Kurnia_Dewi/
+        ├── soalGenap.cpp
         └── README.md
