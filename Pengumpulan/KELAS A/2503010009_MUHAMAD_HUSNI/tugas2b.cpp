@@ -17,7 +17,7 @@ bool isFull() {
 
 void enqueue(string data) {
     if(isFull()) {
-        cout << "Queue penuh\n";
+        cout << "penuh\n";
     } else {
         antrian[++rear] = data;
         cout << data << " masuk ke antrian\n";
@@ -26,7 +26,7 @@ void enqueue(string data) {
 
 void dequeue() {
     if(isEmpty()) {
-        cout << "Queue kosong\n";
+        cout << "kosong\n";
     } else {
         cout << antrian[front] << " keluar dari antrian\n";
         front++;
@@ -35,7 +35,7 @@ void dequeue() {
 
 void peek() {
     if(isEmpty()) {
-        cout << "Queue kosong\n";
+        cout << "kosong\n";
     } else {
         cout << "Antrian depan : " << antrian[front] << endl;
     }
@@ -43,7 +43,7 @@ void peek() {
 
 void tampil() {
     if(isEmpty()) {
-        cout << "Queue kosong\n";
+        cout << "kosong\n";
     } else {
         cout << "\nIsi Antrian:\n";
 
