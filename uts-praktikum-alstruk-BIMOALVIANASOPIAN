@@ -1,0 +1,317 @@
+soal1.cpp
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+struct Buku {
+    string judul;
+    string pengarang;
+    int tahun;
+    float harga;
+};
+
+int main() {
+
+    Buku buku[5];
+    int n;
+
+    cout << "=====================================\n";
+    cout << "     PROGRAM DATA BUKU PERPUSTAKAAN\n";
+    cout << "=====================================\n";
+
+    cout << "Jumlah buku (1-5) : ";
+    cin >> n;
+    cin.ignore();
+
+    // INPUT
+    for(int i = 0; i < n; i++) {
+
+        cout << "\n----------------------------------\n";
+        cout << "Input Data Buku Ke-" << i + 1 << endl;
+        cout << "----------------------------------\n";
+
+        cout << "Judul Buku     : ";
+        getline(cin, buku[i].judul);
+
+        cout << "Nama Pengarang : ";
+        getline(cin, buku[i].pengarang);
+
+        cout << "Tahun Terbit   : ";
+        cin >> buku[i].tahun;
+
+        cout << "Harga Buku     : ";
+        cin >> buku[i].harga;
+        cin.ignore();
+    }
+
+    // OUTPUT TABEL
+    cout << "\n\n==============================================";
+    cout << "\n             DATA SELURUH BUKU";
+    cout << "\n==============================================\n";
+
+    cout << left
+         << setw(5)  << "No"
+         << setw(20) << "Judul"
+         << setw(20) << "Pengarang"
+         << setw(10) << "Tahun"
+         << "Harga\n";
+
+    cout << "---------------------------------------------------------------\n";
+
+    for(int i = 0; i < n; i++) {
+
+        cout << left
+             << setw(5)  << i + 1
+             << setw(20) << buku[i].judul
+             << setw(20) << buku[i].pengarang
+             << setw(10) << buku[i].tahun
+             << buku[i].harga << endl;
+    }
+
+    // HARGA TERTINGGI
+    int max = 0;
+
+    for(int i = 1; i < n; i++) {
+        if(buku[i].harga > buku[max].harga) {
+            max = i;
+        }
+    }
+
+    cout << "\n==============================================\n";
+    cout << "        BUKU DENGAN HARGA TERTINGGI\n";
+    cout << "==============================================\n";
+
+    cout << "Judul      : " << buku[max].judul << endl;
+    cout << "Pengarang  : " << buku[max].pengarang << endl;
+    cout << "Tahun      : " << buku[max].tahun << endl;
+    cout << "Harga      : " << buku[max].harga << endl;
+
+    // RATA-RATA
+    float total = 0;
+
+    for(int i = 0; i < n; i++) {
+        total += buku[i].harga;
+    }
+
+    cout << "\nRata-rata harga buku : " << total / n << endl;
+
+    // PENCARIAN TAHUN
+    int cari;
+    bool ketemu = false;
+
+    cout << "\nMasukkan tahun yang dicari : ";
+    cin >> cari;
+
+    cout << "\nHasil pencarian:\n";
+
+    for(int i = 0; i < n; i++) {
+
+        if(buku[i].tahun == cari) {
+
+            cout << "- " << buku[i].judul << endl;
+            ketemu = true;
+        }
+    }
+
+    if(!ketemu) {
+        cout << "Data buku tidak ditemukan.\n";
+    }
+
+    cout << "\n=====================================\n";
+    cout << "        PROGRAM SELESAI\n";
+    cout << "=====================================\n";
+
+    return 0;
+}
+
+sial2.cpp
+#include <iostream>
+using namespace std;
+
+// ================= STACK =================
+class Stack {
+
+private:
+    string data[5];
+    int top;
+
+public:
+
+    Stack() {
+        top = -1;
+    }
+
+    bool isEmpty() {
+        return top == -1;
+    }
+
+    bool isFull() {
+        return top == 4;
+    }
+
+    void push(string nilai) {
+
+        if(isFull()) {
+            cout << "Stack penuh!\n";
+        }
+        else {
+            top++;
+            data[top] = nilai;
+
+            cout << nilai << " berhasil ditambahkan.\n";
+        }
+    }
+
+    void pop() {
+
+        if(isEmpty()) {
+            cout << "Stack kosong!\n";
+        }
+        else {
+
+            cout << data[top] << " berhasil dihapus.\n";
+            top--;
+        }
+    }
+
+    void peek() {
+
+        if(isEmpty()) {
+            cout << "Stack kosong!\n";
+        }
+        else {
+            cout << "Data teratas : " << data[top] << endl;
+        }
+    }
+
+    void tampil() {
+
+        cout << "\nIsi Stack:\n";
+
+        for(int i = top; i >= 0; i--) {
+            cout << "- " << data[i] << endl;
+        }
+    }
+};
+
+// ================= QUEUE =================
+class Queue {
+
+private:
+    string data[5];
+    int front, rear;
+
+public:
+
+    Queue() {
+
+        front = 0;
+        rear = -1;
+    }
+
+    bool isEmpty() {
+        return rear < front;
+    }
+
+    bool isFull() {
+        return rear == 4;
+    }
+
+    void enqueue(string nama) {
+
+        if(isFull()) {
+            cout << "Queue penuh!\n";
+        }
+        else {
+
+            rear++;
+            data[rear] = nama;
+
+            cout << nama << " masuk ke antrian.\n";
+        }
+    }
+
+    void dequeue() {
+
+        if(isEmpty()) {
+            cout << "Queue kosong!\n";
+        }
+        else {
+
+            cout << data[front] << " keluar dari antrian.\n";
+            front++;
+        }
+    }
+
+    void peek() {
+
+        if(isEmpty()) {
+            cout << "Queue kosong!\n";
+        }
+        else {
+            cout << "Antrian depan : " << data[front] << endl;
+        }
+    }
+
+    void tampil() {
+
+        cout << "\nIsi Queue:\n";
+
+        for(int i = front; i <= rear; i++) {
+            cout << "- " << data[i] << endl;
+        }
+    }
+};
+
+int main() {
+
+    cout << "=====================================\n";
+    cout << "       PROGRAM STACK & QUEUE\n";
+    cout << "=====================================\n";
+
+    // STACK
+    Stack s;
+
+    cout << "\n========== STACK ==========\n";
+
+    s.push("T001");
+    s.push("T002");
+    s.push("T003");
+    s.push("T004");
+
+    s.peek();
+    s.tampil();
+
+    cout << "\nMenghapus data...\n";
+
+    s.pop();
+    s.pop();
+
+    s.tampil();
+
+    // QUEUE
+    Queue q;
+
+    cout << "\n========== QUEUE ==========\n";
+
+    q.enqueue("Budi");
+    q.enqueue("Sari");
+    q.enqueue("Eko");
+
+    q.peek();
+    q.tampil();
+
+    cout << "\nMemproses antrian...\n";
+
+    q.dequeue();
+
+    q.enqueue("Dewi");
+
+    q.tampil();
+
+    cout << "\n=====================================\n";
+    cout << "         PROGRAM SELESAI\n";
+    cout << "=====================================\n";
+
+    return 0;
+}
