@@ -35,7 +35,7 @@ int main() {
      << setw(9)  << "Semester" << "| "
      << setw(5)  << "IPK" << "\n";
 
-    cout << "----|------------|------------------|----------|-------|\n";
+    cout << "----|-------------|-------------------|----------|--------|\n";
     for (int i = 0; i < 5; i++) {   
         cout << left
          << setw(4)  << i + 1 << "| "
@@ -43,7 +43,7 @@ int main() {
          << setw(18) << data[i].nama << "| "
          << setw(9)  << data[i].semester << "| "
          << setw(5)  << fixed << setprecision(2) << data[i].ipk << "\n";
-         cout << "----|------------|------------------|----------|-------|\n";
+         cout << "----|-------------|-------------------|----------|--------|\n";
     }
 
     do {
@@ -59,7 +59,8 @@ int main() {
         {
         case 1:
         {
-            cout << "Cari Mahasiswa dengan IPK Tertinggi\n";
+            cout << "\n\n==============================\n";
+            cout << "\nCari Mahasiswa dengan IPK Tertinggi\n\n";
             float max_ipk = 0;
             Mahasiswa mahasiswa_tertinggi;
             for (int i = 0; i < 5; i++) {
@@ -68,49 +69,60 @@ int main() {
                     mahasiswa_tertinggi = data[i];
                 }
             }
-            cout << "Mahasiswa dengan IPK tertinggi:\n";
+            cout << "\nMahasiswa dengan IPK tertinggi\n\n";
             cout << "NIM: " << mahasiswa_tertinggi.nim << endl;
             cout << "Nama: " << mahasiswa_tertinggi.nama << endl;
             cout << "IPK: " << mahasiswa_tertinggi.ipk << endl;
+            cout << "\n\n==============================\n";
         }
             break;
         case 2:
             {
-                cout << "Hitung rata-rata IPK\n";
+                cout << "\n\n==============================\n";
+                cout << "\nHitung rata-rata IPK\n";
                 float total_ipk = 0;
                 for (int i = 0 ; i < 5; i++) {
                     total_ipk += data[i].ipk;
                 }
                 float rata_rata = total_ipk / 5;
                 cout << "Rata-rata IPK: " << rata_rata << endl;
+                cout << "==============================\n\n";
             }
+            
             break;
         case 3:
             {
-                cout << "Cari Mahasiswa berdasarkan Semester Tertentu\n";
+                cout << "\n\n==============================\n";
+                cout << "\nCari Mahasiswa berdasarkan Semester Tertentu\n";
                 int semester_cari;
                 cout << "Masukan Semester yang ingin dicari : ";
                 cin >> semester_cari;
-                cout << "Mahasiswa dengan Semester " << semester_cari << ":\n";
+                bool found = false;
+                cout << "\n\nMahasiswa dengan Semester " << semester_cari << ":\n";
                 for (int i = 0; i < 5; i++) {
                     if (data[i].semester == semester_cari) {
                         cout << "NIM: " << data[i].nim << endl;
                         cout << "Nama: " << data[i].nama << endl;
                         cout << "IPK: " << data[i].ipk << endl;
                         cout << "-----------------------------\n";
+                        found = true;
                     }
                 }
+                if (!found) {
+                    cout << "\nTidak ada mahasiswa dengan Semester " << semester_cari << ".\n";
+                }
+                cout << "==============================\n\n";
             }
             break;
         case 4:
             {
-                cout << "Keluar dari program. Terima kasih!\n";
+                cout << "Anda sudah keluar dari progam\n";
                 return 0;
             }
             break;
         
         default:
-            cout << "Pilihan tidak valid. Silakan coba.\n";
+            cout << "Pilihan tidak valid. Silakan coba lagi.\n";
             break;
         }
     } while (pilihan != 4);
