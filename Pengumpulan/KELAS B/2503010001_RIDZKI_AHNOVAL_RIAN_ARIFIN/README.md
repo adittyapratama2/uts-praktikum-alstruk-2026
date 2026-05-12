@@ -1,9 +1,9 @@
 # NIM_KAMU - NAMA_KAMU
 
 ## Informasi Pribadi
-- **NIM** : 2503010XXX
-- **Nama** : RIDZKI AHNOVALRIANA
-- **Kelas** : A
+- **NIM** : 2503010031
+- **Nama** : RIDZKI AHNOVAL RIAN ARIFIN
+- **Kelas** : B
 
 ## Informasi Ujian
 - **Mata Kuliah** : Praktikum Algoritma dan Struktur Data
