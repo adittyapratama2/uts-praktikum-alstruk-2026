@@ -1,5 +1,5 @@
 # UTS Praktikum Algoritma dan Struktur Data 2026
-
+# 2503010132- Allya_Hericka_Putri
 ## Informasi Pribadi
 - **NIM** : 2503010132
 - **Nama** : ALLYA_HERICKA_PUTRI
