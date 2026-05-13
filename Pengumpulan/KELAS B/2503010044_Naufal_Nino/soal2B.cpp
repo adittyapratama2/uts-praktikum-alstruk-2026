@@ -61,8 +61,11 @@ void display() {
     }
     else {
         cout << "\n\nSeluruh anggota pada queue saat ini adalah : \n\n";
-        for (int i = front; i <= rear; i++) {
+        int i = front;
+        while (true) {
             cout << queue[i] << endl;
+            if (i == rear) break;
+            i = (i + 1) % QUEUE_SIZE;
         }
     }
 }
