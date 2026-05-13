@@ -1,0 +1,127 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+// Struct Mahasiswa
+struct Mahasiswa {
+    string nim;
+    string nama;
+    int semester;
+    float ipk;
+};
+
+int main() {
+
+    const int MAX = 5;
+    Mahasiswa mhs[MAX];
+
+    int jumlah;
+
+    // Input jumlah mahasiswa
+    do {
+        cout << "Masukkan jumlah mahasiswa (1-5): ";
+        cin >> jumlah;
+
+        if (jumlah < 1 || jumlah > 5) {
+            cout << "Jumlah harus 1 sampai 5!\n";
+        }
+
+    } while (jumlah < 1 || jumlah > 5);
+
+    // Input data mahasiswa
+    for (int i = 0; i < jumlah; i++) {
+
+        cout << "\nData Mahasiswa ke-" << i + 1 << endl;
+
+        cout << "NIM       :";
+        cin >> mhs[i].nim;
+
+        cin.ignore();
+
+        cout << "Nama      :";
+        getline(cin, mhs[i].nama);
+
+        cout << "Semester  :";
+        cin >> mhs[i].semester;
+
+        cout << "IPK       :";
+        cin >> mhs[i].ipk;
+    }
+
+    // Tampilkan data
+    cout << "\n================ DATA MAHASISWA ================\n";
+
+    cout << left
+         << setw(5)  << "No"
+         << setw(15) << "NIM"
+         << setw(25) << "Nama"
+         << setw(12) << "Semester"
+         << setw(5)  << "IPK" << endl;
+
+    for (int i = 0; i < jumlah; i++) {
+
+        cout << left
+             << setw(5)  << i + 1
+             << setw(15) << mhs[i].nim
+             << setw(25) << mhs[i].nama
+             << setw(12) << mhs[i].semester
+             << fixed << setprecision(2)
+             << mhs[i].ipk << endl;
+    }
+
+    // Cari IPK tertinggi
+    int max = 0;
+
+    for (int i = 1; i < jumlah; i++) {
+        if (mhs[i].ipk > mhs[max].ipk) {
+            max = i;
+        }
+    }
+
+    cout << "\n===== IPK TERTINGGI =====\n";
+    cout << "NIM      : " << mhs[max].nim << endl;
+    cout << "Nama     : " << mhs[max].nama << endl;
+    cout << "Semester : " << mhs[max].semester << endl;
+    cout << "IPK      : " << mhs[max].ipk << endl;
+
+    // Rata-rata IPK
+    float total = 0;
+
+    for (int i = 0; i < jumlah; i++) {
+        total += mhs[i].ipk;
+    }
+
+    float rata = total / jumlah;
+
+    cout << "\nRata-rata IPK : "
+         << fixed << setprecision(2)
+         << rata << endl;
+
+    // Cari berdasarkan semester
+    int cari;
+    bool ditemukan = false;
+
+    cout << "\nMasukkan semester yang dicari : ";
+    cin >> cari;
+
+    cout << "\nMahasiswa Semester " << cari << endl;
+
+    for (int i = 0; i < jumlah; i++) {
+
+        if (mhs[i].semester == cari) {
+
+            ditemukan = true;
+
+            cout << "NIM  : " << mhs[i].nim << endl;
+            cout << "Nama : " << mhs[i].nama << endl;
+            cout << "IPK  : " << mhs[i].ipk << endl;
+            cout << "----------------------\n";
+        }
+    }
+
+    if (!ditemukan) {
+        cout << "Tidak ada mahasiswa pada semester tersebut.\n";
+    }
+
+    return 0;
+}-
