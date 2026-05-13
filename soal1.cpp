@@ -18,10 +18,13 @@ int main() {
 	Mahasiswa daftarMhs[KAPASITAS_MAX];
 	
 	cout << "Masukkan jumlah mahasiswa (1-5): ";
-	cin >> jumlah;
+	if (!(cin >> variable)) {
+    cout << "Input tidak valid." << endl;
+    return 1;
+}
 	
 	if (jumlah < 1 || jumlah > KAPASITAS_MAX) {
-		cout << "Jumlah tidak valid! Harap masukkan 1 samoai 5." << endl;
+		cout << "Jumlah tidak valid! Harap masukkan 1 sampai 5." << endl;
 		return 1;
 	}
 	
