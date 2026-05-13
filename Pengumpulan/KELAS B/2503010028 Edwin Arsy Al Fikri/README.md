@@ -1,6 +1,6 @@
 # STRUKTUR FILE README.md
 
-```text
+
 # 2503010028  - Edwin_Arsy_Al_Fikri
 
 ## Informasi Pribadi
