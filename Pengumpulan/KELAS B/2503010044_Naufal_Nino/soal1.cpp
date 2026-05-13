@@ -20,8 +20,10 @@ int main() {
         cout << "Masukan data mahasiswa ke-" << i + 1 << endl;
         cout << "Masukan NIM : ";
         cin >> data[i].nim;
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "Masukan NIM : ";
+        cin >> data[i].nim;
         cout << "Masukan Nama : ";
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         getline(cin, data[i].nama);
         cout << "Masukan Semester : ";
         cin >> data[i].semester;
@@ -66,7 +68,7 @@ int main() {
             cout << "\nCari Mahasiswa dengan IPK Tertinggi\n\n";
             float max_ipk = data[0].ipk;
             Mahasiswa mahasiswa_tertinggi = data[0];
-            for (int i = 0; i < 5; i++) {
+            for (int i = 1; i < 5; i++) {
                 if (data[i].ipk > max_ipk) {
                     max_ipk = data[i].ipk;
                     mahasiswa_tertinggi = data[i];
