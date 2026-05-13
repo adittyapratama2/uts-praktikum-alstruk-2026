@@ -61,9 +61,9 @@ int main() {
         {
             cout << "\n\n==============================\n";
             cout << "\nCari Mahasiswa dengan IPK Tertinggi\n\n";
-            float max_ipk = 0;
-            Mahasiswa mahasiswa_tertinggi;
-            for (int i = 0; i < 5; i++) {
+            float max_ipk = data[0].ipk;
+            Mahasiswa mahasiswa_tertinggi = data[0];
+            for (int i = 1; i < 5; i++) {
                 if (data[i].ipk > max_ipk) {
                     max_ipk = data[i].ipk;
                     mahasiswa_tertinggi = data[i];
