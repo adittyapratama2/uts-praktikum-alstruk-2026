@@ -21,12 +21,12 @@ bool isFull(Stack &s) {
     return s.top == MAX - 1;
 }
 
-void push(Stack &s, string tidakTransaksi) {
+void push(Stack &s, string Transaksi) {
     if (isFull(s)) {
         cout << "Stack penuh!" << endl;
     } else {
         s.top++;
-        s.data[s.top] = tidakTransaksi;
+        s.data[s.top] = Transaksi;
     }
 }
 
