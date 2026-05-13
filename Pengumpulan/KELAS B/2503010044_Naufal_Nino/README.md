@@ -1,4 +1,4 @@
-```text
+_```text
 # 2503010044 - NAUFAL_NINO_SHALAAH_MA`SHUUM
 
 ## Informasi Pribadi
@@ -20,9 +20,10 @@ Dev c++ hanya sebagai tempat pegujian, oleh karena itu kenapa file nya bertipe .
 mengerjakannya.
 ---
 
-## DAFTAR ISI
-- [Soal 1](#ARRAY and STRUCT)
-- [Soal 2](#STACK and QUEUE)
++## DAFTAR ISI
++- [Soal 1](`#array-and-struct`)
++- [Soal 2A](`#soal-2a`)
++- [Soal 2B](`#soal-2b`)
 
 ## ANALISIS & PEMBAHASAN SOAL
 
@@ -57,4 +58,4 @@ Sebutkan sumber belajar yang digunakan, contohnya:
 - Modul Praktikum Algoritma dan Struktur Data
 - Video pembelajaran online (YouTube, Coursera, dll.)
 - AI Copilot untuk bertanya masalah dan membantu menerjemahkan error
-```
+_```

@@ -9,11 +9,11 @@ int front = -1;
 int rear = -1;
 
 bool isFULL() {
-    return rear == QUEUE_SIZE - 1;
+   return !isEMPTY() && ((rear + 1) % QUEUE_SIZE == front);
 }
 
 bool isEMPTY() {
-    return front == -1 || front  > rear;
+    return front == -1;
 }
 
 void enqueue(string value) {
@@ -21,10 +21,13 @@ void enqueue(string value) {
         cout << "\n\nQueue sudah penuh. Tidak dapat menambahkan anggota kedalamnya.\n\n";
     }
     else {
-        if(isEMPTY()) {
+        if (isEMPTY()) {
             front = 0;
+            rear = 0;
         }
-        rear++;
+        else {
+            rear = (rear + 1) % QUEUE_SIZE;
+        }
         queue[rear] = value;
         cout << "\n\nanggota dengan nama " << value << " berhasil ditambahakan ke dalam queue.\n\n";
     }
@@ -35,7 +38,12 @@ void dequeue() {
     }
     else {
         cout << "\n\nanggota dengan nama " << queue[front] << " berhasil dihapus dari queue.\n\n";
-        front++;
+        if (front == rear) {
+            front = rear = -1;
+        }
+        else {
+            front = (front + 1) % QUEUE_SIZE;
+        }
     }
 }
 void peek() {

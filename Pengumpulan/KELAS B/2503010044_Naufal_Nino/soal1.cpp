@@ -1,5 +1,7 @@
 #include <iostream>
 #include <iomanip>
+#include <string>
+#include <limits>
 
 using namespace std;
 
@@ -18,8 +20,9 @@ int main() {
         cout << "Masukan data mahasiswa ke-" << i + 1 << endl;
         cout << "Masukan NIM : ";
         cin >> data[i].nim;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cout << "Masukan Nama : ";
-        cin >> data[i].nama;
+        getline(cin, data[i].nama);
         cout << "Masukan Semester : ";
         cin >> data[i].semester;
         cout << "Masukan IPK : ";
@@ -61,8 +64,8 @@ int main() {
         {
             cout << "\n\n==============================\n";
             cout << "\nCari Mahasiswa dengan IPK Tertinggi\n\n";
-            float max_ipk = 0;
-            Mahasiswa mahasiswa_tertinggi;
+            float max_ipk = data[0].ipk;
+            Mahasiswa mahasiswa_tertinggi = data[0];
             for (int i = 0; i < 5; i++) {
                 if (data[i].ipk > max_ipk) {
                     max_ipk = data[i].ipk;
