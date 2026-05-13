@@ -24,7 +24,7 @@
 Analisis: Program ini menggunakan `struct` untuk menyimpan data mahasiswa dan `array` untuk menampung banyak data. Fitur utamanya adalah mencari mahasiswa dengan IPK tertinggi, menghitung rata-rata IPK, dan melakukan pencarian data berdasarkan semester.
 
 ### Soal 2
-Analisis: Program ini mengimplementasikan konsep struktur data untuk manajemen data di sistem perpustakaan, mempermudah proses input dan pengelolaan urutan data secara efisien.
+Analisis: Program ini mengimplementasikan konsep struktur data Stack dan Queue untuk manajemen data di sistem perpustakaan, mempermudah proses input dan pengelolaan urutan data secara efisien.
 
 ---
 
@@ -32,4 +32,3 @@ Analisis: Program ini mengimplementasikan konsep struktur data untuk manajemen d
 - Modul Praktikum Algoritma dan Struktur Data
 - Latihan kisi-kisi
 - YouTube Kelas Terbuka
-  
