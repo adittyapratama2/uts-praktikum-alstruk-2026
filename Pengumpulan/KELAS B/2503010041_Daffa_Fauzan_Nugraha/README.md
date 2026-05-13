@@ -1,16 +1,16 @@
-# 2503010041 - Daffa_Fauzan_Nugraha
+2503010041 - DAFFA_FAUZAN_NUGRAHA
 
-## Informasi Pribadi
-- **NIM**        : 2503010041
-- **Nama**       : Daffa Fauzan Nugraha
-- **Kelas**      : B
+Informasi Pribadi
+**NIM** : 250301041
+**Nama** : DAFFA_FAUZAN_NUGRAHA
+**Kelas** : B
 
-## Informasi Ujian
-- **Mata Kuliah**      : Praktikum Algoritma dan Struktur Data
-- **Semester**         : Genap 2025/2026
-- **Media Submit**     : GitHub Pull Request
-- **Bahasa**           : C++
-- **IDE**              : Dev C++
+Informasi Ujian
+**Mata Kuliah** : Praktikum Algoritma dan Struktur Data
+**Semester** : Genap 2025/2026
+**Media Submit** : GitHub Pull Request
+**Bahasa** : C++
+**IDE** : Dev C++
 
 ---
 
