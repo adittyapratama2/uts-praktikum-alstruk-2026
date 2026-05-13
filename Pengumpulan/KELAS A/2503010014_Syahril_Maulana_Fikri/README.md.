@@ -1,0 +1,36 @@
+# 2503010014 - SYAHRIL MAULANA FIKRI
+
+## Informasi Pribadi
+- **NIM** : 2503010014
+- **Nama** : SYAHRIL MAULANA FIKRI
+- **Kelas** : A
+
+## Informasi Ujian
+- **Mata Kuliah** : Praktikum Algoritma dan Struktur Data
+- **Semester** : Genap 2025/2026
+- **Media Submit** : GitHub Pull Request
+- **Bahasa** : C++
+- **IDE** : Dev C++
+
+---
+
+## DAFTAR ISI
+- [Soal 1](#soal-1)
+- [Soal 2](#soal-2)
+
+## ANALISIS & PEMBAHASAN SOAL
+
+### Soal 1
+program ini diimplementasikan menggunakan struktur data **Struct** bernama `mahasiswa` untuk mengelompokkan berbagai tipe data (NIM, Nama, Semester, IPK) menjadi satu entitas. Program menggunakan **Array of Struct** dengan kapasitas 5 data untuk menyimpan input secara berurutan. Logika utamanya menggunakan perulangan `while` dan kontrol menu `switch-case` untuk memungkinkan pengguna menambah data atau menampilkan seluruh daftar mahasiswa yang telah tersimpan di memori.
+
+### Soal 2
+Analisis: Program ini mengimplementasikan dua struktur data sekaligus, yaitu **Stack** (Tumpukan) dan **Queue** (Antrean).
+1. **Stack**: Digunakan untuk mengelola data dengan prinsip **LIFO** (*Last In First Out*), di mana elemen yang terakhir dimasukkan akan menjadi yang pertama dikeluarkan. Fungsi yang digunakan adalah `push` untuk menambah dan `pop` untuk mengambil data.
+2. **Queue**: Digunakan untuk mengelola data dengan prinsip **FIFO** (*First In First Out*), di mana elemen yang pertama masuk akan menjadi yang pertama keluar. Implementasinya menggunakan fungsi `enqueue` untuk menambah antrean dan `dequeue` untuk mengeluarkan data dari antrean.
+
+
+---
+
+## SUMBER BELAJAR
+- Video pembelajaran online (YouTube, Coursera, dll.)
+- Dokumentasi resmi bahasa C++
