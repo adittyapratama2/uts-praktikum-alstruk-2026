@@ -52,6 +52,7 @@ public:
             cout << "Stack kosong.\n";
         } else {
             cout << "\nIsi Stack Buku:\n";
+
             for (int i = top; i >= 0; i--) {
                 cout << "- " << buku[i] << endl;
             }
@@ -67,34 +68,47 @@ private:
 
 public:
     Queue() {
-        front = 0;
+        front = -1;
         rear = -1;
     }
 
     bool isEmpty() {
-        return rear < front;
+        return front == -1;
     }
 
     bool isFull() {
-        return rear == 4;
+        return (rear + 1) % 5 == front;
     }
 
     void enqueue(string nama) {
         if (isFull()) {
             cout << "Queue penuh! Anggota tidak bisa ditambahkan.\n";
-        } else {
-            rear++;
-            anggota[rear] = nama;
-            cout << nama << " masuk ke antrean.\n";
+            return;
         }
+
+        if (isEmpty()) {
+            front = rear = 0;
+        } else {
+            rear = (rear + 1) % 5;
+        }
+
+        anggota[rear] = nama;
+
+        cout << nama << " masuk ke antrean.\n";
     }
 
     void dequeue() {
         if (isEmpty()) {
             cout << "Queue kosong!\n";
+            return;
+        }
+
+        cout << anggota[front] << " keluar dari antrean.\n";
+
+        if (front == rear) {
+            front = rear = -1;
         } else {
-            cout << anggota[front] << " keluar dari antrean.\n";
-            front++;
+            front = (front + 1) % 5;
         }
     }
 
@@ -111,8 +125,16 @@ public:
             cout << "Queue kosong.\n";
         } else {
             cout << "\nIsi Queue Antrean:\n";
-            for (int i = front; i <= rear; i++) {
+
+            int i = front;
+
+            while (true) {
                 cout << "- " << anggota[i] << endl;
+
+                if (i == rear)
+                    break;
+
+                i = (i + 1) % 5;
             }
         }
     }
@@ -141,7 +163,14 @@ int main() {
         cout << "8. Tampilkan Queue\n";
         cout << "9. Keluar\n";
         cout << "Pilihan: ";
-        cin >> pilihan;
+
+        while (!(cin >> pilihan)) {
+            cout << "Input harus angka!\n";
+            cin.clear();
+            cin.ignore(1000, '\n');
+
+            cout << "Pilihan: ";
+        }
 
         cin.ignore();
 

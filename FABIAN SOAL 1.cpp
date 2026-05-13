@@ -14,7 +14,13 @@ int main() {
     int jumlah;
 
     cout << "Masukkan jumlah mahasiswa (1-5): ";
-    cin >> jumlah;
+
+    while (!(cin >> jumlah) || jumlah < 1 || jumlah > 5) {
+        cout << "Input tidak valid! Masukkan angka 1-5: ";
+
+        cin.clear();
+        cin.ignore(1000, '\n');
+    }
 
     // Input data mahasiswa
     for (int i = 0; i < jumlah; i++) {
@@ -79,7 +85,11 @@ int main() {
         totalIPK += mhs[i].ipk;
     }
 
-    float rataIPK = totalIPK / jumlah;
+    float rataIPK = 0;
+
+    if (jumlah > 0) {
+        rataIPK = totalIPK / jumlah;
+    }
 
     cout << "\nRata-rata IPK seluruh mahasiswa : "
          << fixed << setprecision(2)
