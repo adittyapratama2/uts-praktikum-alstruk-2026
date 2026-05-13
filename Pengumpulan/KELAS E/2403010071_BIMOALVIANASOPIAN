@@ -1,0 +1,92 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+struct Buku {
+    string judul;
+    string pengarang;
+    int tahunTerbit;
+    float harga;
+};
+
+int main() {
+    Buku buku[5];
+    int n;
+
+    cout << "Masukkan jumlah buku (1-5): ";
+    cin >> n;
+    cin.ignore();
+
+    for (int i = 0; i < n; i++) {
+        cout << "\nData Buku ke-" << i + 1 << endl;
+
+        cout << "Judul : ";
+        getline(cin, buku[i].judul);
+
+        cout << "Pengarang : ";
+        getline(cin, buku[i].pengarang);
+
+        cout << "Tahun Terbit : ";
+        cin >> buku[i].tahunTerbit;
+
+        cout << "Harga : ";
+        cin >> buku[i].harga;
+        cin.ignore();
+    }
+
+    cout << "\n==============================================" << endl;
+    cout << left << setw(5) << "No"
+         << setw(20) << "Judul"
+         << setw(20) << "Pengarang"
+         << setw(10) << "Tahun"
+         << "Harga" << endl;
+
+    for (int i = 0; i < n; i++) {
+        cout << left << setw(5) << i + 1
+             << setw(20) << buku[i].judul
+             << setw(20) << buku[i].pengarang
+             << setw(10) << buku[i].tahunTerbit
+             << buku[i].harga << endl;
+    }
+
+    int maxIndex = 0;
+    for (int i = 1; i < n; i++) {
+        if (buku[i].harga > buku[maxIndex].harga) {
+            maxIndex = i;
+        }
+    }
+
+    cout << "\nBuku dengan harga tertinggi:" << endl;
+    cout << "Judul : " << buku[maxIndex].judul << endl;
+    cout << "Pengarang : " << buku[maxIndex].pengarang << endl;
+    cout << "Tahun : " << buku[maxIndex].tahunTerbit << endl;
+    cout << "Harga : " << buku[maxIndex].harga << endl;
+
+    float total = 0;
+    for (int i = 0; i < n; i++) {
+        total += buku[i].harga;
+    }
+
+    cout << "\nRata-rata harga buku : " << total / n << endl;
+
+    int cariTahun;
+    bool ditemukan = false;
+
+    cout << "\nMasukkan tahun yang dicari : ";
+    cin >> cariTahun;
+
+    cout << "\nBuku yang terbit tahun " << cariTahun << ":" << endl;
+
+    for (int i = 0; i < n; i++) {
+        if (buku[i].tahunTerbit == cariTahun) {
+            cout << "- " << buku[i].judul << endl;
+            ditemukan = true;
+        }
+    }
+
+    if (!ditemukan) {
+        cout << "Tidak ada buku yang terbit pada tahun tersebut." << endl;
+    }
+
+    return 0;
+}
