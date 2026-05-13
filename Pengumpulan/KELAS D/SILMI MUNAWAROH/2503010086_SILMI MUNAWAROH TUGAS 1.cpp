@@ -50,7 +50,7 @@ int main () {
              << setw(15) << mhs[i].nim
              << setw(20) << mhs[i].nama
              << setw(10) << mhs[i].semester
-             << setw(10) << mhs[i].semester
+             << setw(10) << mhs[i].ipk
              << endl;
     }
 
