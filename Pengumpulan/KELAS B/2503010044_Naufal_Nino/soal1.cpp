@@ -18,8 +18,11 @@ int main() {
         cout << "Masukan data mahasiswa ke-" << i + 1 << endl;
         cout << "Masukan NIM : ";
         cin >> data[i].nim;
+        cout << "Masukan NIM : ";
+        cin >> data[i].nim;
         cout << "Masukan Nama : ";
-        cin >> data[i].nama;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        getline(cin, data[i].nama);
         cout << "Masukan Semester : ";
         cin >> data[i].semester;
         cout << "Masukan IPK : ";
