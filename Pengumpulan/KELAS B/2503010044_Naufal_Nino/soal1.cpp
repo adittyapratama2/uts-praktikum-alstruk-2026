@@ -24,9 +24,17 @@ int main() {
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         getline(cin, data[i].nama);
         cout << "Masukan Semester : ";
-        cin >> data[i].semester;
+        while (!(cin >> data[i].semester) || data[i].semester <= 0) {
+            cout << "Input tidak valid. Masukan Angaka : ";
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
         cout << "Masukan IPK : ";
-        cin >> data[i].ipk;
+        while (!(cin >> data[i].ipk)) {
+            cout << "Input tidak valid. Masukan Angka : ";
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
         cout << endl;
     }
 
@@ -104,7 +112,11 @@ int main() {
                 cout << "\nCari Mahasiswa berdasarkan Semester Tertentu\n";
                 int semester_cari;
                 cout << "Masukan Semester yang ingin dicari : ";
-                cin >> semester_cari;
+                while (!(cin >> semester_cari)) {
+                    cout << "Input semestertidak valid. Masukan Angka : ";
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
                 bool found = false;
                 cout << "\n\nMahasiswa dengan Semester " << semester_cari << ":\n";
                 for (int i = 0; i < 5; i++) {
