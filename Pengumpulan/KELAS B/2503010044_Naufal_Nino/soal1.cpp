@@ -14,12 +14,10 @@ struct Mahasiswa {
 
 int main() {
     Mahasiswa data[5];
-    int pilihan;
+    int pilihan = 0;
 
     for (int i = 0; i < 5; i++) {
         cout << "Masukan data mahasiswa ke-" << i + 1 << endl;
-        cout << "Masukan NIM : ";
-        cin >> data[i].nim;
         cout << "Masukan NIM : ";
         cin >> data[i].nim;
         cout << "Masukan Nama : ";
@@ -58,7 +56,12 @@ int main() {
         cout << "3. cari Mahasiswa dengan Semester Tertentu\n";
         cout << "4. Keluar\n";
         cout << "Pilih menu (1-4): ";
-        cin >> pilihan;
+        if (!(cin >> pilihan)) {
+            cout << "Input tidak valid. Silakan masukkan angka antara 1 dan 4.\n";
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            continue;
+        }
 
         switch (pilihan)
         {
